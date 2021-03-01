@@ -4,10 +4,14 @@
     class="grid grid-cols-12 col-gap-10 self-center 1xl:p-0 px-12"
   >
     <!-- Left Container -->
-    <div class="left col-start-1 col-end-5">
+    <div
+      class="left col-start-1 col-end-5 animate__animated animate__fadeInLeft"
+    >
       <!-- Name -->
-      <h1 class="text-6xl font-bold leading-none text-left">Washington</h1>
-      <h1 class="text-6xl font-bold leading-none text-right">Junior</h1>
+      <div class="animate__animated animate__headShake animate__delay-1s">
+        <h1 class="text-6xl font-bold leading-none text-left">Washington</h1>
+        <h1 class="text-6xl font-bold leading-none text-right">Junior</h1>
+      </div>
 
       <!-- Badges -->
       <div class="w-full grid grid-cols-2 gap-6 my-16">
@@ -27,15 +31,21 @@
         <h3 class="text-3xl font-semibold mb-4">Tecnologias</h3>
         <div v-for="(tech, index) in techs" :key="index" class="mb-6">
           <p class="text-sm mb-1">{{ tech.name }}</p>
-          <div class="w-full h-2 rounded-lg bg-white bg-opacity-50">
-            <div :class="`w-${tech.points}/12 h-2 rounded-lg bg-white`"></div>
+          <div
+            class="w-full h-2 rounded-lg bg-white bg-opacity-50 overflow-hidden"
+          >
+            <div
+              :class="`w-${tech.points}/12 h-2 rounded-lg bg-white animate__animated animate__lightSpeedInLeft animate__delay-1s`"
+            ></div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Middle Container -->
-    <div class="middle col-start-5 col-end-10 grid grid-rows-2 h-full">
+    <div
+      class="middle col-start-5 col-end-10 grid grid-rows-2 h-full animate__animated animate__fadeInUp"
+    >
       <!-- Topics -->
       <div v-for="(topic, index) in topics" :key="index" class="mb-6">
         <h3 class="font-semibold text-3xl">{{ topic.title }}</h3>
@@ -48,7 +58,7 @@
       <!-- Image -->
       <div class="relative w-full">
         <img
-          class="rounded-lg"
+          class="rounded-lg animate__animated animate__bounceInDown"
           src="~assets/images/profile.jpg"
           alt="Washington"
         />
@@ -58,7 +68,7 @@
           <img
             v-for="(other, index) in others"
             :key="index"
-            class="w-6 h-6 mr-3 cursor-pointer hover:opacity-50 transition-opacity duration-500"
+            class="w-6 h-6 mr-3 cursor-pointer hover:opacity-50 transition-opacity duration-500 animate__animated animate__zoomIn animate__delay-1s"
             :src="require(`../assets/icons/${other.icon}.svg`)"
             :alt="other.name"
           />
@@ -70,7 +80,7 @@
         <p
           v-for="(item, index) in menu"
           :key="index"
-          class="w-min opacity-25 hover:opacity-100 cursor-pointer transition-opacity duration-500"
+          :class="`w-min opacity-25 hover:opacity-100 cursor-pointer transition-opacity duration-500 animate__animated animate__lightSpeedInRight animate__delay-${index}s`"
         >
           {{ item.name }}
         </p>
