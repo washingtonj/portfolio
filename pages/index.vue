@@ -44,12 +44,12 @@
 
     <!-- Middle Container -->
     <div
-      class="middle col-start-5 col-end-10 grid grid-rows-2 h-full animate__animated animate__fadeInUp"
+      class="middle col-start-5 col-end-10 h-full animate__animated animate__fadeInUp"
     >
       <!-- Topics -->
       <div v-for="(topic, index) in topics" :key="index" class="mb-6">
         <h3 class="font-semibold text-3xl">{{ topic.title }}</h3>
-        <p>{{ topic.text }}</p>
+        <p v-html="topic.text">{{ topic.text }}</p>
       </div>
     </div>
 
@@ -134,13 +134,17 @@ export default {
     topics: [
       {
         title: 'Sobre',
-        text:
-          'Minhas skills mais aguçadas atualmente giram em torno do mundo FrontEnd, desenvolvo aplicações Web, Mobile e Desktop utilizando frameworks e bibliotecas Javascript reativas, como React, React Native e Vue. Em ambiente React/React Native tenho utilizado ferramentas como React Router DOM, Redux, Redux Sagas, Styled-Componentes e padrões como Duck Pattern e outros. Já em ambiente Vue, a utilização de Vuex, Vue-Router e SASS junto com o padrão BEM CSS ou TailwindCSS vem sendo minha principal escolha a ser combinada com outras ferramentas como Storybook para documentação e criação de libs UI.',
+        text: `<p>Como voc&ecirc; j&aacute; deve saber, me chamo Washington, ou Junior caso ache mais f&aacute;cil. Nascido em 12 de Outubro de 1996,&nbsp;<em>"Sim, no dia das crian&ccedil;as"</em>, sou um autodidata apaixonado por tecnologia e inova&ccedil;&atilde;o.</p>
+          <p>&nbsp;</p>
+          <p>A mais de 6 anos, estou inserido no mercado tecnologico, onde minha miss&atilde;o sempre foi encontrar solu&ccedil;&otilde;es para os desafios do dia a dia, sejam eles de infrastrutura ou desenvolvimento, pensando sempre de maneira inteligente e proativa.&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>Sou formado em Rede de Computadores pela Universidade Cidade de S&atilde;o Paulo, "<em>Sim, eu estudei a tabela OSI", mas&nbsp;</em>meu interesse por infrastrutura e pela cultura DevOps somadas a vontade de aprender e a facilidade de adapta&ccedil;&atilde;o, me tornaram tamb&eacute;m um desenvolvedor.</p>
+          `,
       },
       {
-        title: 'Projetos',
-        text:
-          'Minhas skills mais aguçadas atualmente giram em torno do mundo FrontEnd, desenvolvo aplicações Web, Mobile e Desktop utilizando frameworks e bibliotecas Javascript reativas, como React, React Native e Vue. Em ambiente React/React Native tenho utilizado ferramentas como React Router DOM, Redux, Redux Sagas, Styled-Componentes e padrões como Duck Pattern e outros. Já em ambiente Vue, a utilização de Vuex, Vue-Router e SASS junto com o padrão BEM CSS ou TailwindCSS vem sendo minha principal escolha a ser combinada com outras ferramentas como Storybook para documentação e criação de libs UI.',
+        title: 'O que utilizo',
+        text: `<p>Atualmente minha linguagem principal &eacute; o Javascript, sendo ela utilizada em todas as frentes como BackEnd com NodeJS, FrontEnd com React e Vue, Mobile com React Native e Desktop com Electron.&nbsp;</p><br/>
+          <p>Para estiliza&ccedil;&atilde;o utilizo de recursos de pr&eacute; processadores de CSS como SASS/SCSS somado ao padr&atilde;o BEM ou frameworks CSS como TailwindCSS, al&eacute;m de bibliotecas CSS-in-JS como Styled Components e Emotion.</p>`,
       },
     ],
 
