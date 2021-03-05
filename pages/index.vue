@@ -35,7 +35,8 @@
             class="w-full h-2 rounded-lg bg-white bg-opacity-50 overflow-hidden"
           >
             <div
-              :class="`w-${tech.points}/12 h-2 rounded-lg bg-white animate__animated animate__lightSpeedInLeft animate__delay-1s`"
+              :class="`h-2 rounded-lg bg-white animate__animated animate__lightSpeedInLeft animate__delay-1s`"
+              :style="{ width: `${tech.points}%` }"
             ></div>
           </div>
         </div>
@@ -49,6 +50,7 @@
       <!-- Topics -->
       <div v-for="(topic, index) in topics" :key="index" class="mb-6">
         <h3 class="font-semibold text-3xl">{{ topic.title }}</h3>
+        <!-- eslint-disable-next-line vue/no-v-html -->
         <p v-html="topic.text">{{ topic.text }}</p>
       </div>
     </div>
@@ -126,9 +128,9 @@ export default {
     ],
 
     techs: [
-      { name: 'ReactJS', points: 10 },
-      { name: 'VueJS', points: 9 },
-      { name: 'React Native', points: 5 },
+      { name: 'ReactJS', points: 75 },
+      { name: 'VueJS', points: 85 },
+      { name: 'React Native', points: 50 },
     ],
 
     topics: [

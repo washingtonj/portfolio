@@ -13,6 +13,9 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
+  // Generate Static Site
+  target: 'server',
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['animate.css/animate.css'],
 
