@@ -65,13 +65,18 @@
 
         <!-- Others Container -->
         <div class="absolute-container flex absolute right-0">
-          <img
+          <a
             v-for="(other, index) in others"
             :key="index"
-            class="w-6 h-6 mr-3 cursor-pointer hover:opacity-50 transition-opacity duration-500 animate__animated animate__zoomIn animate__delay-1s"
-            :src="require(`../assets/icons/${other.icon}.svg`)"
-            :alt="other.name"
-          />
+            :href="other.url"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="w-6 h-6 mr-3 cursor-pointer hover:opacity-50 transition-opacity duration-500 animate__animated animate__zoomIn animate__delay-1s"
+              :src="require(`../assets/icons/${other.icon}.svg`)"
+              :alt="other.name"
+          /></a>
         </div>
       </div>
 
@@ -80,8 +85,9 @@
         <p
           v-for="(item, index) in menu"
           :key="index"
-          :class="`w-min opacity-25 hover:opacity-100 cursor-pointer transition-opacity duration-500 animate__animated animate__lightSpeedInRight animate__delay-${index}s`"
+          :class="`flex items-center w-min opacity-25 hover:opacity-100 cursor-pointer transition-opacity duration-500 animate__animated animate__lightSpeedInRight animate__delay-${index}s`"
         >
+          <span class="mr-6 text-sm">🏗</span>
           {{ item.name }}
         </p>
       </div>
@@ -139,9 +145,21 @@ export default {
     ],
 
     others: [
-      { name: 'github', url: '', icon: 'github' },
-      { name: 'codesandbox', url: '', icon: 'codesandbox' },
-      { name: 'linkedin', url: '', icon: 'linkedin' },
+      {
+        name: 'github',
+        url: 'https://github.com/washingtonj',
+        icon: 'github',
+      },
+      {
+        name: 'codesandbox',
+        url: 'https://codesandbox.io/u/washingtonj',
+        icon: 'codesandbox',
+      },
+      {
+        name: 'linkedin',
+        url: 'https://www.linkedin.com/in/washington-junior-7136a8101/',
+        icon: 'linkedin',
+      },
     ],
 
     menu: [
