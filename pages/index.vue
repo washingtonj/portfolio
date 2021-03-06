@@ -1,14 +1,16 @@
 <template>
   <div
     id="about"
-    class="grid grid-cols-12 col-gap-10 self-center 1xl:p-0 px-12"
+    class="lg:grid grid-cols-12 col-gap-10 self-center lg:h-full 1xl:p-0 px-12"
   >
     <!-- Left Container -->
     <div
       class="left col-start-1 col-end-5 animate__animated animate__fadeInLeft"
     >
       <!-- Name -->
-      <div class="animate__animated animate__headShake animate__delay-1s">
+      <div
+        class="max-w-xl animate__animated animate__headShake animate__delay-1s"
+      >
         <h1 class="text-6xl font-bold leading-none text-left">Washington</h1>
         <h1 class="text-6xl font-bold leading-none text-right">Junior</h1>
       </div>
@@ -60,7 +62,7 @@
       <!-- Image -->
       <div class="relative w-full">
         <img
-          class="rounded-lg animate__animated animate__bounceInDown"
+          class="rounded-lg md:animate__animated animate__bounceInDown"
           src="~assets/images/profile.jpg"
           alt="Washington"
         />

@@ -1,10 +1,6 @@
 <template>
-  <div class="flex h-screen max-w-screen-xl m-auto">
-    <div class="italic px-8 self-center m-auto xl:hidden">
-      Vamos com calma, a pagina ainda está em construção, abra em uma tela com
-      resolução maior que 1280px
-    </div>
-    <Nuxt class="hidden xl:grid" />
+  <div class="flex max-w-screen-xl mx-auto my-16">
+    <Nuxt />
   </div>
 </template>
 
