@@ -1,5 +1,5 @@
 <template>
-  <div class="flex max-w-screen-xl mx-auto my-16">
+  <div class="flex max-w-screen-xl mx-auto px-12">
     <Nuxt />
   </div>
 </template>

@@ -2,7 +2,7 @@
   <div
     v-if="show"
     id="about"
-    class="lg:grid grid-cols-12 col-gap-10 self-center lg:h-full 1xl:p-0 px-12"
+    class="lg:grid grid-cols-12 col-gap-10 self-center my-12 lg:h-full 1xl:p-0"
   >
     <!-- Left Container -->
     <div
