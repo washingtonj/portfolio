@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="show"
     id="about"
     class="lg:grid grid-cols-12 col-gap-10 self-center lg:h-full 1xl:p-0 px-12"
   >
@@ -60,7 +61,7 @@
     <!-- Right Container -->
     <div class="right col-start-10 col-end-13">
       <!-- Image -->
-      <div class="relative w-full">
+      <div class="relative w-full animate__animated animate__fadeInRight">
         <img
           class="rounded-lg md:animate__animated animate__bounceInDown"
           src="~assets/images/profile.jpg"
@@ -100,10 +101,6 @@
 </template>
 
 <script>
-export default {}
-</script>
-
-<script>
 export default {
   data: () => ({
     badges: [
@@ -140,9 +137,9 @@ export default {
         title: 'Sobre',
         text: `<p>Como voc&ecirc; j&aacute; deve saber, me chamo Washington, ou Junior caso ache mais f&aacute;cil. Nascido em 12 de Outubro de 1996,&nbsp;<em>"Sim, no dia das crian&ccedil;as"</em>, sou um autodidata apaixonado por tecnologia e inova&ccedil;&atilde;o.</p>
           <p>&nbsp;</p>
-          <p>A mais de 6 anos, estou inserido no mercado tecnologico, onde minha miss&atilde;o sempre foi encontrar solu&ccedil;&otilde;es para os desafios do dia a dia, sejam eles de infrastrutura ou desenvolvimento, pensando sempre de maneira inteligente e proativa.&nbsp;</p>
+          <p>A mais de 6 anos, estou inserido no mercado tecnologico, onde minha miss&atilde;o sempre foi encontrar solu&ccedil;&otilde;es para os desafios do dia a dia, sejam eles de infraestrutura ou desenvolvimento, pensando sempre de maneira inteligente e proativa.&nbsp;</p>
           <p>&nbsp;</p>
-          <p>Sou formado em Rede de Computadores pela Universidade Cidade de S&atilde;o Paulo, "<em>Sim, eu estudei a tabela OSI", mas&nbsp;</em>meu interesse por infrastrutura e pela cultura DevOps somadas a vontade de aprender e a facilidade de adapta&ccedil;&atilde;o, me tornaram tamb&eacute;m um desenvolvedor.</p>
+          <p>Sou formado em Rede de Computadores pela Universidade Cidade de S&atilde;o Paulo, "<em>Sim, eu estudei a tabela OSI", mas&nbsp;</em>meu interesse por infraestrutura e pela cultura DevOps somadas a vontade de aprender e a facilidade de adapta&ccedil;&atilde;o, me tornaram tamb&eacute;m um desenvolvedor.</p>
           `,
       },
       {
@@ -174,7 +171,15 @@ export default {
       { name: 'Projetos', url: '' },
       { name: 'Blog', url: '' },
     ],
+
+    show: false,
   }),
+
+  mounted() {
+    setTimeout(() => {
+      this.show = true
+    }, 500)
+  },
 }
 </script>
 
