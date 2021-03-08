@@ -87,14 +87,15 @@
 
       <!-- Menu -->
       <div class="flex flex-col items-end mt-12 font-thin text-4xl uppercase">
-        <p
+        <nuxt-link
           v-for="(item, index) in menu"
           :key="index"
+          :to="item.url"
           :class="`flex items-center w-min opacity-25 hover:opacity-100 cursor-pointer transition-opacity duration-500 animate__animated animate__lightSpeedInRight animate__delay-${index}s`"
         >
-          <span class="mr-6 text-sm">🏗</span>
+          <span v-if="item.inDevelop" class="mr-6 text-sm">🏗</span>
           {{ item.name }}
-        </p>
+        </nuxt-link>
       </div>
     </div>
   </div>
@@ -168,8 +169,8 @@ export default {
     ],
 
     menu: [
-      { name: 'Projetos', url: '' },
-      { name: 'Blog', url: '' },
+      { name: 'Portfolio', url: '/portfolio', inDevelop: false },
+      { name: 'Blog', url: '', inDevelop: true },
     ],
 
     show: false,
