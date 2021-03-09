@@ -28,15 +28,15 @@
       <div class="grid grid-cols-2 gap-4 mt-4">
         <!-- Card -->
         <div class="bg-gray-100 bg-opacity-25 rounded-lg p-4 h-32">
-          <span class="font-semibold text-lg">Total de projetos</span>
-          <div class="overflow-scroll">
+          <span class="font-semibold text-lg">Total</span>
+          <div>
             <p class="font-light">{{ totalProjects }} Projetos</p>
           </div>
         </div>
         <!-- Card -->
         <div class="bg-gray-100 bg-opacity-25 rounded-lg p-4 h-32">
-          <span class="font-semibold text-lg">O que já utilizei</span>
-          <div class="overflow-scroll">
+          <span class="font-semibold text-lg">Linguagens</span>
+          <div>
             <p class="font-light">
               {{ langsUsed.langs }}
             </p>
@@ -44,15 +44,15 @@
         </div>
         <!-- Card -->
         <div class="bg-gray-100 bg-opacity-25 rounded-lg p-4 h-32">
-          <span class="font-semibold text-lg">O que mais utilizei</span>
-          <div class="overflow-scroll">
+          <span class="font-semibold text-lg">Mais utilizada</span>
+          <div>
             <p class="font-light">{{ langsUsed.more }}</p>
           </div>
         </div>
         <!-- Card -->
         <div class="bg-gray-100 bg-opacity-25 rounded-lg p-4 h-32">
-          <span class="font-semibold text-lg">O que menos utilizei</span>
-          <div class="overflow-scroll">
+          <span class="font-semibold text-lg">Menos utilizada</span>
+          <div>
             <p class="font-light">{{ langsUsed.less }}</p>
           </div>
         </div>
@@ -63,13 +63,16 @@
       class="col-start-6 col-end-12 lg:overflow-hidden animate__animated animate__fadeInRight"
     >
       <!-- Search Bar -->
-      <div class="w-full bg-gray-100 bg-opacity-25 h-12 rounded-xl mb-4">
+      <div
+        class="flex w-full bg-gray-100 bg-opacity-25 h-12 rounded-xl mb-4 py-2 px-4"
+      >
         <input
-          class="w-full h-full bg-transparent p-3 placeholder-gray-100 font-light placeholder-opacity-50 outline-none"
+          class="w-full h-full bg-transparent placeholder-gray-100 font-light placeholder-opacity-50 outline-none"
           type="text"
           placeholder="Pesquise por um projeto."
           @input="search"
         />
+        <img class="w-4" src="~assets/icons/search.svg" alt="search ico" />
       </div>
 
       <!-- Results -->
@@ -88,7 +91,7 @@
             {{
               repo.description && !!repo.description.length
                 ? repo.description
-                : 'Desculpe, ainda não adicione descrição a este projeto ☹️.'
+                : 'Desculpe, ainda não adicionei uma descrição a este projeto ☹️.'
             }}
           </p>
           <div class="flex w-full">
